@@ -1,0 +1,14 @@
+{
+    "7": {
+    "name": "Product",
+    "description": "Description",
+    "price": "499.99",
+    "baseCurrency": "gbp"
+    },
+    "9": {
+        "name": "Product",
+        "description": "Description",
+        "price": "499.99",
+        "baseCurrency": "gbp"
+    }
+}

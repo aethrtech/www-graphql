@@ -1,0 +1,31 @@
+{
+  "name": "www-graphql",
+  "version": "1.0.0",
+  "description": "MyWebula database server",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "test": "npm test"
+  },
+  "author": "MyWebula Ltd",
+  "license": "UNLICENCED",
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "apollo-server": "^2.10.1",
+    "apollo-server-lambda": "^2.10.1",
+    "graphql": "^14.6.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.1",
+    "typescript": "^3.7.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mywebula/www-graphql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mywebula/www-graphql/issues"
+  },
+  "homepage": "https://github.com/mywebula/www-graphql#readme"
+}
