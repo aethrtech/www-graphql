@@ -121,6 +121,15 @@ const resolvers = {
         },
         session: (parent:any, args:any, context:any, info:any) => {
 
+            if (!args.id){
+                let id = Math.floor(Math.random() * 100)
+                //@ts-ignore
+                sessions[`${id}`] = []
+
+                return {id:`${id}`,items:[]}
+
+            }
+
             if(args.items.length > 0){
                 //@ts-ignore
                 let cache = [], toDelete = []
