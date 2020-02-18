@@ -42,6 +42,12 @@ const typeDefs = gql`
         quantity: Int
     }
 
+    type messageRespose {
+        status: Int
+        message: String
+        data: [Item]
+    }
+
     type Session {
         id: ID,
         items: [Item]
@@ -55,6 +61,7 @@ const typeDefs = gql`
     }
 
     type Mutation {
+        items(items:[inputItem]) : messageRespose
         session(id:String, items:[inputItem]) : Session
     }
 `
@@ -101,6 +108,17 @@ const resolvers = {
         }
     },
     Mutation: {
+        items: (parent:any, args:any, context:any, info:any) => {
+
+            //@ts-ignore
+            args.items.forEach(item => items = {...items, [Math.floor(Math.random() * 100)]: item} )
+            
+            return {
+                status:200,
+                message: 'OK',
+                data: args.items
+            }
+        },
         session: (parent:any, args:any, context:any, info:any) => {
 
             if(args.items.length > 0){
